@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="acceuil.html">Accueil</a></li> 
+                <li><a href="projets.html">Projets</a></li> 
+                <li><a href="services.html">Services</a></li> 
+                <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+        </nav>
+        <img src="image/img.png" alt="entete du siteweb" width="1500px" height="400px">
+        </header>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+</head>
+
+<body>
+    <h1>Inscription</h1>
+    <form action="traitement_inscription.php" method="POST">
+        <label for="nom">First Name* :</label>
+        <input type="text" id="nom" name="nom" required pattern=".{3,}" title="Le nom doit avoir au moins 3 caracteres"><br>
+
+        <label for="prenom">Last Name :</label>
+        <input type="text" id="prenom" name="prenom" required pattern=".{3,}" title="Le prenom doit avoir au moins 3 caracteres"><br>
+
+        <label for="address">Address* :</label>
+        <input type="text" id="address" name="Address" ><br>
+
+        <label for="telephone">Phone Number* :</label>
+        <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{10}" title="Le numero de telephone doit contenir 10 chiffres"><br>
+
+        <label for="dob">Date of birth :</label>
+        <input type="date" id="dob" name="dob" required placeholder="Selectionnez votre date de naissance"><br>
+
+        <label for="email">Email* :</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="mot_de_passe">Password* :</label>
+        <input type="password" id="mot_de_passe" name="mot_de_passe" required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,}$"
+            title="Le mot de passe doit inclure une combinaison de minuscules, majuscules, chiffres et symboles (au moins 8 caractres)"><br>
+
+            <label for="confirm_mot_de_passe">Confirm Password* :</label>
+            <input type="confirm_password" id="confirm_mot_de_passe" name="confirm_mot_de_passe" required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]{8,}$"
+                title="Le mot de passe doit inclure une combinaison de minuscules, majuscules, chiffres et symboles (au moins 8 caractres)"><br>
+    
+        <input type="submit" value="Submit"> <input type="reset" value="Reset">
+    </form>
+</body>
+
+<footer>
+    <section>
+        <h1>Contactez Nous</h1>
+        <p> <a href="mailto:contact@monsite.com">mail: esprit@esprit.tn</a> </p>
+    </section>
+</footer>
+
+</html>
